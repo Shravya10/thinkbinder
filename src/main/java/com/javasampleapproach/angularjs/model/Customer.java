@@ -1,16 +1,11 @@
 package com.javasampleapproach.angularjs.model;
 
 import java.sql.Date;
-
-import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-
 
 @Document(collection = "createuser")
 public class Customer {
-
-	@Id
-	private String id;
+	
 	private String firstname;
 	private String lastname;
 	private String contactno;
@@ -21,10 +16,9 @@ public class Customer {
 	public Customer() {
 	}
 
-	public Customer(String id, String firstname, String lastname, String contactno, String email, Date dob,
+	public Customer( String firstname, String lastname, String contactno, String email, Date dob,
 			String technology) {
 		super();
-		this.id = id;
 		this.firstname = firstname;
 		this.lastname = lastname;
 		this.contactno = contactno;
@@ -69,16 +63,8 @@ public class Customer {
 
 	@Override
 	public String toString() {
-		return "Customer [id=" + id + ", firstname=" + firstname + ", lastname=" + lastname + ", contactno=" + contactno
+		return "Customer [ firstname=" + firstname + ", lastname=" + lastname + ", contactno=" + contactno
 				+ ", email=" + email + ", dob=" + dob + ", technology=" + technology + "]";
-	}
-
-	public String getId() {
-		return id;
-	}
-
-	public void setId(String id) {
-		this.id = id;
 	}
 
 	public String getTechnology() {

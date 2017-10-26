@@ -31,7 +31,7 @@ public class CustomerDaoImpl implements CustomerDao {
 	public void create(Customer customer){
 		try {
 			System.out.println("Before DAO");
-			DBCollection collection = mongoTemplate.getCollection("user");
+			DBCollection collection = mongoTemplate.getCollection("createuser");
 			BasicDBObject document = new BasicDBObject();
 			
 			document.put("firstName", customer.getFirstname());

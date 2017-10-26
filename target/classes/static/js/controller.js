@@ -9,13 +9,12 @@ app.controller('createusercontroller', function($scope, $http, $location) {
 			}
 		}
 		var data = {
-			id : $scope.id;
-			firstname : $scope.firstname;
-			lastname : $scope.lastname;
-			contactno : $scope.contactno;
-			email : $scope.email;
-			dob : $scope.dob;
-			technology : $scope.technology;
+			firstname : $scope.firstname,
+			lastname : $scope.lastname,
+			contactno : $scope.contactno,
+			email : $scope.email,
+			dob : $scope.dob,
+			technology : $scope.technology
 		};
 
 		$http.post(url, data, config).then(function(response) {
@@ -25,7 +24,6 @@ app.controller('createusercontroller', function($scope, $http, $location) {
 			$scope.postResultMessage = "Fail!";
 		});
 		
-		$scope.id = "";
 		$scope.firstname = "";
 		$scope.lastname = "";
 		$scope.contactno = "";
